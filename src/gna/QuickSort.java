@@ -18,7 +18,7 @@ public class QuickSort extends SortingAlgorithm{
 			throw new IllegalArgumentException("argument 'array' must not be null.");
 		}
 		this.counter = 0;
-	     return sort(array, 0, array.length - 1);
+		return sort(array, 0, array.length - 1);
 
 	}
 
@@ -38,6 +38,7 @@ public class QuickSort extends SortingAlgorithm{
 	    int down = lo;
 	    int up = hi + 1;
 	    Comparable pivot = array[lo];
+
 	    while (true){
 	        while (Compare.less(array[++down], pivot)){
 	            counter++;
@@ -51,6 +52,7 @@ public class QuickSort extends SortingAlgorithm{
             counter++;
 	        if(down >= up) break;
 	        Compare.exch(array, down, up);
+	        counter++;
         }
         Compare.exch(array, lo, up);
 	    return up;

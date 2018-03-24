@@ -1,20 +1,19 @@
 package gna;
-
-import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
-	/**
-	 * Example main function.
-	 * 
-	 * You can replace this.
-	 */
+
+    public static Comparable[] list(int size) {
+
+        Comparable[] anArray = new Integer[size];
+        for(int i=0;i<anArray.length;i++)
+        {
+            anArray[i] = ThreadLocalRandom.current().nextInt(1, 1000);;
+        }
+        return anArray;
+    }
+
 	public static void main(String[] args) {
-		Comparable[] mrh = {1, 8, 5, 6, 7, 2};
-		QuickSort ok = new QuickSort();
-		long bag = ok.sort(mrh);
-        System.out.println(bag);
-        bag = ok.sort(mrh);
-        System.out.println(bag);
 
 
 	}
